@@ -14,5 +14,10 @@ while(opcao !==0){
 
     opcao = parseInt(prompt("Opção: "));
 
+     if (isNaN(opcao)){
+    console.log("Digite um número!");
+    continue;
+
     }
 
+}
