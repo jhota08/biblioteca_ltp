@@ -18,6 +18,21 @@ while(opcao !==0){
     console.log("Digite um número!");
     continue;
 
+     switch(opcao){
+        case 1:
+            let titulo = prompt("Título:");
+            let autor = prompt("Autor: ");
+            let genero = prompt("Gênero: ");
+            let anoPub = parseInt(prompt("Ano de publicação: "));
+            let numPaginas = parseInt(prompt("Número de páginas: "));
+
+            livros.push(new Livro(titulo, autor, genero, anoPub, numPaginas));
+            console.log("Livro cadastrado!");
+            break;
+
+
     }
 
+
+}
 }
