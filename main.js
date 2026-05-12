@@ -39,7 +39,33 @@ while(opcao !==0){
             });
             } 
             break;
-    
+
+         case 3:
+            livros.forEach((livro, i) => {
+            console.log(`[${i}] ${livro.getInfo()}`);
+            });
+
+            let indice = parseInt(prompt("Índice do livro: "));
+
+            if (isNaN(indice) || indice < 0 || indice >= livros.length) {
+            console.log("Índice inválido.");
+             } else {
+            let novoTitulo = prompt("Novo título: ");
+            let novoAutor = prompt("Novo autor: ");
+            let novoGenero = prompt("Novo gênero: ");
+            let novoAno = prompt("Novo ano: ");
+            let novasPaginas = prompt("Novas páginas: ");
+
+            if (novoTitulo.trim() !== "") livros[indice].titulo = novoTitulo;
+            if (novoAutor.trim() !== "") livros[indice].autor = novoAutor;
+            if (novoGenero.trim() !== "") livros[indice].genero = novoGenero;
+            if (novoAno.trim() !== "") livros[indice].anoPub = parseInt(novoAno);
+            if (novasPaginas.trim() !== "") livros[indice].numPaginas = parseInt(novasPaginas);
+
+            console.log("Livro alterado!");
+            }
+            break;   
+
     }
 
 }
