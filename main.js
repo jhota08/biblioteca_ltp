@@ -17,6 +17,7 @@ while(opcao !==0){
      if (isNaN(opcao)){
     console.log("Digite um número!");
     continue;
+     }
 
      switch(opcao){
         case 1:
@@ -82,7 +83,12 @@ while(opcao !==0){
             }
             break;
 
-    }
+         case 0:
+            console.log("Programa encerrado");
+            break;
 
-}
-}
+            default:
+            console.log("Escolha uma opção do menu!");        
+    }
+};
+
