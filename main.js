@@ -30,9 +30,17 @@ while(opcao !==0){
             console.log("Livro cadastrado!");
             break;
 
-
+        case 2:
+            if (livros.length === 0) {
+             console.log("Nenhum livro cadastrado.");
+            } else {
+             livros.forEach((livro, i) => {
+             console.log(`[${i}] ${livro.getInfo()}`);
+            });
+            } 
+            break;
+    
     }
-
 
 }
 }
