@@ -40,7 +40,7 @@ while(opcao !==0){
             } 
             break;
 
-         case 3:
+        case 3:
             livros.forEach((livro, i) => {
             console.log(`[${i}] ${livro.getInfo()}`);
             });
@@ -64,7 +64,23 @@ while(opcao !==0){
 
             console.log("Livro alterado!");
             }
-            break;   
+            break; 
+
+        case 4:
+            if (livros.length === 0) {
+            console.log("Nenhum livro cadastrado.");
+            } else {
+            let aux = new Livro("", "", "", 0, 0);
+
+            console.log("Média de páginas:", aux.mediaNumPaginas(livros));
+
+            let generos = aux.contarPorGenero(livros);
+
+            for (let genero in generos) {
+            console.log(genero + ": " + generos[genero]);
+             }
+            }
+            break;
 
     }
 
