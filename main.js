@@ -1,6 +1,5 @@
-const prompt = require('prompt-sync')();
-const Livro = require('.Livro');
+const prompt = require("prompt-sync")();
+const Livro = require("./Livro");
 
-const Livros = [];
+const livros = [];
 
-let opcao;
